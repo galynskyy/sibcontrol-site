@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<title>SibControl - Отзывы о нас</title>
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="shortcut icon" href="../favicon.ico">
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="container">
+		<!-- Modal -->
+			<!-- Call Phone -->
+				<div class="modal fade" id="modal_callback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<h4 class="modal-title" id="myModalLabel">Заказать обратный звонок</h4>
+							</div>
+							<div class="modal-body">
+								<div class="alert alert-success" role="alert">
+									<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+									<span class="sr-only">Success:</span>
+									<strong>Заявка принята. Менеджер свяжется с вами в ближайшее время.</strong>
+								</div>
+								<div class="alert alert-danger" role="alert">
+									<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+									<span class="sr-only">Error:</span>
+									<strong>Ой, кажется произошла ошибка. Попробуйте позже.</strong>
+								</div>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+										Подождите немного. Идет отправка заявки...
+									</div>
+								</div>
+								<form class="form-horizontal" id="callback_form" role="form" action="javascript:void(0);">
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Меня зовут:</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" id="callback_name" placeholder="Введите имя">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Мой телефон:</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" id="callback_phone" placeholder="Введите телефон">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Удобное время:</label>
+										<div class="col-sm-9">
+											<select id="callback_time" class="form-control">
+												<option value="morning">9.00 - 12.00</option>
+												<option value="lunch">12.00 - 14.00</option>
+												<option value="day">14.00 - 16.00</option>
+												<option value="evening">16.00 - 18.00</option>
+											</select>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-primary btn-block">Отправить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- /Call Phone -->
+			<!-- Add Request -->
+				<div class="modal fade" id="modal_request" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<h4 class="modal-title" id="myModalLabel">Оставить заявку</h4>
+							</div>
+							<div class="modal-body">
+								<div class="alert alert-success" role="alert">
+									<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+									<span class="sr-only">Success:</span>
+									<strong>Заявка принята. Менеджер свяжется с вами в ближайшее время.</strong>
+								</div>
+								<div class="alert alert-danger" role="alert">
+									<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+									<span class="sr-only">Error:</span>
+									<strong>Ой, кажется произошла ошибка. Попробуйте позже.</strong>
+								</div>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+										Подождите немного. Идет отправка заявки...
+									</div>
+								</div>
+								<form class="form-horizontal" role="form" id="request_form" action="javascript:void(0);">
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Меня зовут:</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" id="request_name" placeholder="Введите имя">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Мой телефон:</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" id="request_phone" placeholder="Введите телефон">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Тип услуги:</label>
+										<div class="col-sm-9">
+											<select id="request_type" class="form-control">
+												<option value="control">Видеонаблюдение и контроль</option>
+												<option value="computer">Обслуживание компьютеров</option>
+											</select>
+										</div>
+									</div>
+									<!--<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Дополнительно:</label>
+										<div class="col-sm-9">
+											<textarea class="form-control" rows="3" id="request_extra" placeholder="Дополнительная информация"></textarea>
+										</div>
+									</div>-->
+									<button type="submit" class="btn btn-primary btn-block">Отправить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- /Add Request -->
+			<!-- Add FeedBack -->
+				<div class="modal fade" id="modal_feedback" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+								<h4 class="modal-title" id="myModalLabel">Обратиться в поддержку</h4>
+							</div>
+							<div class="modal-body">
+								<div class="alert alert-success" role="alert">
+									<span class="glyphicon glyphicon-ok-sign" aria-hidden="true"></span>
+									<span class="sr-only">Success:</span>
+									<strong>Заявка принята. Менеджер свяжется с вами в ближайшее время.</strong>
+								</div>
+								<div class="alert alert-danger" role="alert">
+									<span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+									<span class="sr-only">Error:</span>
+									<strong>Ой, кажется произошла ошибка. Попробуйте позже.</strong>
+								</div>
+								<div class="progress">
+									<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+										Подождите немного. Идет отправка заявки...
+									</div>
+								</div>
+								<form class="form-horizontal" role="form" id="feedback_form" action="javascript:void(0);">
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Ваше имя:</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" id="feedback_name" placeholder="Введите имя">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Мой телефон:</label>
+										<div class="col-sm-9">
+											<input type="text" class="form-control" id="feedback_phone" placeholder="Введите телефон">
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="inputEmail3" class="col-sm-3 control-label">Сообщение:</label>
+										<div class="col-sm-9">
+											<textarea class="form-control" rows="3" id="feedback_message" placeholder="Введите текст"></textarea>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-primary btn-block">Отправить</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			<!-- /Add FeedBack -->
+		<!-- /Modal -->
+		<!-- Header -->
+			<div class="row" id="header">
+				<div class="col-md-3" id="logo_header">
+					<a href="/"><img src="../img/logo.png"></a>
+				</div>
+				<div class="col-md-3" id="contact_header">
+					<p>Тел. +7-913-985-2844</p>
+				</div>
+				<div class="col-md-3" id="desc_header">
+					<p>Системы видеонаблюдения</p>
+				</div>
+				<div class="col-md-3" id="action_header">
+					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal_callback">Заказать звонок</button>
+					<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal_request">Оставить заявку</button>
+				</div>
+			</div>
+		<!-- Header -->
+		<!-- Menu -->
+			<nav class="navbar navbar-custom" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header visible-xs-block">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Переключатель навигации</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Меню</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li><a href="/">Главная</a></li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Услуги <span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="/control.html">Видеонаблюдение и контроль</a></li>
+									<li><a href="/computer.html">Обслуживание компьютеров</a></li>
+								</ul>
+							</li>
+							<li><a href="/news.html">Новости</a></li>
+							<li><a href="/contacts.html">Контакты</a></li>
+							<li><a href="/reviews.html">Отзывы</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		<!-- /Menu -->
+		<!-- Content -->
+			<div class="row">
+				<div class="col-md-9 global-content" id="reviews">
+					<h3>Отзывы о нас</h3>
+					<h4><a name="1"></a>Игорь [02.03.14]</h4>
+					<p>
+						«Хотелось отметить, что сотрудники компании «Системы контроля» выполнили свою работу на профессиональном уровне
+						и в указанные сроки за что хотим выразить свою благодарность и пожелать успехов и процветания.»
+					</p>
+					<hr>
+					<h4><a name="2"></a>Максим [15.05.14]</h4>
+					<p>
+						«Мы выражаем Вам благодарность за отличную работу и техническую поддержку, оказываемую нашей компании.
+						Хочется отдельно отметить эффективную и профессиональную работу Ваших специалистов и оперативность выполнения работ»
+					</p>
+					<hr>
+					<h4><a name="3"></a>Владислав [21.07.14]</h4>
+					<p>
+						«Мы можем рекомендовать данную организацию как надежного и ответственного партнера, способного качественно
+						и в установленные сроки выполнить работы любой сложности. Подробная проработка технического задания, оперативное
+						реагирование на дополнительные запросы заказчика — все это оставляет приятное впечатление от совместной работы»
+					</p>
+					<hr>
+				</div>
+				<div class="col-md-3" id="sidebar">
+					<div class="panel panel-default" id="news_sidebar">
+						<div class="panel-heading">Новости</div>
+						<ul class="list-group">
+							<li class="list-group-item"><a href="/news.html#open_site">Мы открылись!</a></li>
+						</ul>
+					</div>
+					<div class="panel panel-default" id="contacts_sidebar">
+						<div class="panel-heading">Контакты</div>
+						<ul class="list-group">
+							<li class="list-group-item">Телефон: +7-913-985-2844</li>
+							<li class="list-group-item"><button class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_feedback"><span class="glyphicon glyphicon-envelope"></span> Написать нам!</button></li>
+							<li class="list-group-item"><button class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_callback"><span class="glyphicon glyphicon-phone-alt"></span> Заказать звонок!</button></li>
+							<li class="list-group-item"><button class="btn btn-default btn-block" data-toggle="modal" data-target="#modal_request"><span class="glyphicon glyphicon-plus"></span> Оставить заявку!</button></li>
+						</ul>
+					</div>
+					<!--<div class="panel panel-default" id="reviews_sidebar">
+						<div class="panel-heading">Отзывы клиентов</div>
+						<ul class="list-group">
+							<li class="list-group-item"><strong>Игорь [02.03.14]</span></strong>: Сотрудники компании выполнили свою работу на высоком уровне <a href="/?page=reviews#1">Читать далее&raquo;</a></li>
+							<li class="list-group-item"><strong>Максим [15.05.14]</strong>: Мы выражаем Вам благодарность за отличную работу и техническую поддержку <a href="/?page=reviews#2">Читать далее&raquo;</a></li>
+							<li class="list-group-item"><strong>Владислав [21.07.14]</strong>: Мы рекомендуем данную компанию как надежного и ответственного партнера <a href="/?page=reviews#3">Читать далее&raquo;</a></li>
+						</ul>
+					</div>-->
+					<div class="panel panel-default" id="kits_sidebar">
+						<div class="panel-heading">Предложения</div>
+						<div class="panel-body">
+							<div id="carousel-example-generic" class="carousel" data-ride="carousel">
+								<div class="carousel-inner">
+									<div class="item active">
+										<a href="control.html#calculator"><img src="../img/kits/video/one.png" alt="..."></a>
+									</div>
+									<div class="item">
+										<a href="control.html#calculator"><img src="../img/kits/video/two.png" alt="..."></a>
+									</div>
+									<div class="item">
+										<a href="control.html#calculator"><img src="../img/kits/video/three.png" alt="..."></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="panel panel-default">
+						<div class="panel-heading">Мы ВКонтакте!</div>
+						<div class="panel-body">
+							<script type="text/javascript" src="//vk.com/js/api/openapi.js?115"></script>
+							<div id="vk_groups"></div>
+							<script type="text/javascript">
+								VK.Widgets.Group("vk_groups", {mode: 1, width: "230", height: "400", color1: 'FFFFFF', color2: '2B587A', color3: '5B7FA6'}, 76611036);
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- /Content -->
+		<!-- Footer -->
+			<div id="footer">
+				<p>© 2014 SibControl</p>
+			</div>
+		<!-- /Footer -->
+		</div>
+		<!-- JS -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+			<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+			<script src="../js/main.js"></script>
+			<script src="../js/mask.js"></script>
+		<!-- /JS -->
+	</body>
+</html>

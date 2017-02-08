@@ -1,0 +1,353 @@
+/* Fonts */
+	@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic);
+	@import url(https://fonts.googleapis.com/css?family=Roboto);
+/* /Fonts */
+/* Setting Background */
+	body{
+		background-color: #EEEEE7;
+		background-image: url(../img/background.png);
+		background-position: top center;
+		background-repeat: repeat-y;
+	}
+/* /Setting Background */
+/* Header */
+	#header p{
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	#header > #contact_header,
+	#header > #desc_header{
+		font-size: 18px;
+		text-align: center;
+	}
+	#header > #action_header{
+		text-align: center;
+	}
+	#header > #action_header button{
+		font-size: 15px;
+		margin-top: 15px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	#header > #logo_header img{
+		width: 250px;
+		height: 65px;
+	}
+	#header > #contact_header p{
+		margin-top: 23px;
+	}
+	#header > #desc_header p{
+		margin-top: 20px;
+	}
+	/* Mobile */
+		@media (max-width: 768px){
+			#header > #logo_header{
+				text-align: center;
+			}
+			#header > #action_header button,
+			#header > #contact_header p,
+			#header > #desc_header p{
+				margin: 0;
+			}
+		}
+	/* /Mobile */
+/* /Header */
+/* Navigation */
+	.navbar-custom{
+		background-color: #0D387D;
+		margin-top: 10px;
+	}
+	.navbar-custom .navbar-brand{
+		color: #ffffff;
+	}
+	.navbar-custom .navbar-nav > li > a{
+		color: #ffffff;
+	}
+	.navbar-custom .navbar-nav li a{
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 18px;
+	}
+	.navbar-custom .navbar-nav > li > a:hover,
+	.navbar-custom .navbar-nav > li > a:focus{
+		background-color: #114CAC;
+	}
+	.navbar-custom .navbar-nav > .active > a,
+	.navbar-custom .navbar-nav > .active > a:hover,
+	.navbar-custom .navbar-nav > .active > a:focus{
+		background-color: #114CAC;
+	}
+	.navbar-custom .navbar-nav > .open > a,
+	.navbar-custom .navbar-nav > .open > a:hover,
+	.navbar-custom .navbar-nav > .open > a:focus {
+		background-color: #114CAC;
+	}
+	.navbar-custom .navbar-toggle{
+		border-color: #BFBFBF;
+	}
+	.navbar-custom .navbar-toggle:hover,
+	.navbar-custom .navbar-toggle:focus{
+		background-color: #114CAC;
+	}
+	.navbar-custom .navbar-toggle .icon-bar{
+		background-color: #ffffff;
+	}
+	/* Desktop */
+		@media (min-width: 768px){
+			.navbar-custom .navbar-collapse{
+				padding-left: 0;
+			}
+			.navbar-custom .container-fluid{
+				padding: 0;
+			}
+		}
+	/* /Desktop */
+	/* Mobile */
+		@media (max-width: 768px){
+			.navbar-custom .navbar-nav .open .dropdown-menu > li > a{
+				color: #ffffff;
+			}
+			.navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+			.navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus{
+				color: #ffffff;
+				background-color: #114CAC;
+			}
+			.navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+			.navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+			.navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus{
+				color: #ffffff;
+				background-color: #114CAC;
+			}
+		}
+	/* /Mobile */
+/* /Navigation */
+/* Content */
+	/* Glogal Content */
+		.global-content h3,h4,p,li,table{
+			font-family: 'Roboto', sans-serif;
+		}
+		.global-content h3{
+			text-align: center;
+			font-size: 20px;
+			font-weight: bold;
+			text-decoration: underline;
+		}
+		.global-content h4{
+			font-size: 18px;
+			text-align: justify;
+			font-weight: bold;
+		}
+		.global-content p{
+			font-size: 16px;
+			text-align: justify;
+		}
+		.global-content li{
+			font-size: 16px;
+			text-align: justify;
+		}
+		.global-content th{
+			font-size: 18px;
+			text-align: justify;
+			font-weight: bold;
+			text-align: center;
+		}
+		.global-content td{
+			font-size: 16px;
+			text-align: justify;
+		}
+		.global-content .well{
+			text-align: center;
+			font-weight: bold;
+			font-size: 16px;
+		}
+		.global-content a{
+			cursor: pointer;
+		}
+		
+	/* /Global Content */
+	/* Main */
+		#main h4{
+			text-align: center;
+			text-decoration: underline;
+		}
+		/* Stage */
+			#advantages .thumbnail:hover{
+				border: 1px solid #57A6FF;
+			}
+			#advantages .caption > p{
+				text-align: center;
+			}
+		/* /Stage */
+	/* /Main */
+	/* Contacts */
+		#contacts p:last-of-type{
+			text-align: center;
+		}
+	/* /Contacts */
+	/* News */
+		#news h4{
+			text-decoration: underline;
+		}
+	/* /News */
+	/* Reviews */
+		#reviews h4{
+			text-decoration: underline;
+		}
+	/* /Reviews */
+	/* SideBar */
+		#sidebar .panel-heading{
+			font-family: 'Roboto', sans-serif;
+			font-size: 18px;
+			text-decoration: underline;
+			text-align: center;
+		}
+		#sidebar .list-group-item{
+			font-family: 'Roboto Condensed', sans-serif;
+			text-align: justify;
+			font-size: 16px;
+		}
+		#sidebar button{
+			font-size: 16px;
+		}
+		#sidebar #news_sidebar .list-group-item,
+		#sidebar #contacts_sidebar .list-group-item{
+			text-align: center;
+		}
+		#sidebar #kits_sidebar img:hover{
+			opacity: 0.9;
+			transition: 0.2s;
+		}
+	/* /SideBar */
+	/* Control */
+		#control h4{
+			text-decoration: underline;
+		}
+		/* Video Quality */
+			#video_quality{
+				border: 1px solid #000000;
+				background: radial-gradient(ellipse, #E6E6E6, #A2A395);
+				color: #000000;
+				display: none;
+			}
+			#video_quality h4{
+				text-align: center;
+			}
+			#video_quality button{
+				font-size: 16px;
+				font-family: 'Roboto Condensed', sans-serif;
+			}
+			#video_quality .embed-responsive{
+				margin-top: 10px;
+			}
+			
+			#hd_quality,#fullhd_quality,#quadhd_quality{
+				display: none;
+			}
+		/* /Video Quality */
+		/* Calculator */
+			#calculator{
+				border: 1px solid #000000;
+				background: radial-gradient(ellipse, #E6E6E6, #A2A395);
+				color: #000000;
+			}
+			#calculator label{
+				font-family: 'Roboto Condensed', sans-serif;
+				font-size: 18px;
+			}
+			#calculator_title h4{
+				text-align: center;
+			}
+			#calculator_total h4{
+				text-decoration: none;
+				text-align: center;
+			}
+			#total_value{
+				color: #DA1015;
+			}
+			#calculator_next h4{
+				text-align: center;
+				font-size: 18px;
+				text-decoration: none;
+			}
+			#calculator_next a{
+				color: #454040;
+				border-bottom: 1px dashed #000000;
+				text-decoration: none;
+			}
+			#calculator_next a:hover{
+				color: #555555;
+				border-bottom: 1px dashed #555555;
+			}
+			#calculator_order{
+				display: none;
+				text-align: center;
+			}
+			#calculator_order button{
+				width: 50%;
+				margin: auto;
+				text-align: center;
+				font-size: 16px;
+				font-family: 'Roboto Condensed', sans-serif;
+			}
+		/* /Calculator */
+		/* Mobile */
+			@media (max-width: 768px){
+				#calculator,#calculator_order{text-align: center;}
+			}
+		/* /Mobile */
+	/* /Control */
+	/* Computer */
+		#computer h4{
+			text-decoration: underline;
+		}
+		#computer table{
+			display: none;
+		}
+	/* /Computer */
+/* /Content */
+/* Footer */
+	#footer{
+		background-color: #233F6C;
+		padding: 10px;
+		color: #ffffff;
+		margin-top: 5px;
+		text-align: center;
+	}
+	#footer p{
+		margin-top: 5px;
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 16px;
+	}
+/* Footer */
+/* Modal */
+	.modal-header h4{
+		font-size: 18px;
+		text-align: center;
+		font-family: 'Roboto', sans-serif;
+		font-weight: bold;
+		text-decoration: underline;
+	}
+	.modal-body label{
+		font-family: 'Roboto Condensed', sans-serif;
+		font-size: 18px;
+	}
+	.modal-body button{
+		font-size: 16px;
+		font-family: 'Roboto Condensed', sans-serif;
+	}
+	.progress,.alert{
+		display: none;
+	}
+	.alert{
+		font-size: 16px;
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+	}
+	.progress-bar{
+		font-size: 16px;
+		font-family: 'Roboto', sans-serif;
+		text-align: center;
+	}
+	/* Mobile */
+		@media (max-width: 768px){
+			.modal-body{text-align: center;}
+		}
+	/* /Mobile */
+/* /Modal */
